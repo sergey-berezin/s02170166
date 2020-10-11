@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleIO", "ConsoleIO\ConsoleIO.csproj", "{65764AEE-658A-4B76-8064-D498714AEAA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetAutumnClassLibrary", "NetAutumnClassLibrary\NetAutumnClassLibrary.csproj", "{9DF705D3-F707-4F56-9ECD-7CD279EA0CF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65764AEE-658A-4B76-8064-D498714AEAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65764AEE-658A-4B76-8064-D498714AEAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65764AEE-658A-4B76-8064-D498714AEAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65764AEE-658A-4B76-8064-D498714AEAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF705D3-F707-4F56-9ECD-7CD279EA0CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF705D3-F707-4F56-9ECD-7CD279EA0CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF705D3-F707-4F56-9ECD-7CD279EA0CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF705D3-F707-4F56-9ECD-7CD279EA0CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {846B0688-02CA-4C64-A317-7AABC04BFD21}
+	EndGlobalSection
+EndGlobal
