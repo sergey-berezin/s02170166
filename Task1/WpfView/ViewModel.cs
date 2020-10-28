@@ -1,23 +1,14 @@
 ﻿using NetAutumnClassLibrary;
 
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Formats;
-using SixLabors.ImageSharp.Processing;
 
-using System.Windows;
+using System.Threading;
+using System.ComponentModel;
+using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using System.IO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
-using System.IO.Ports;
-using System.ComponentModel;
-using System.Collections.Concurrent;
-using System.Collections.ObjectModel;
+
 
 namespace WpfView
 {

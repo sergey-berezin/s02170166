@@ -1,13 +1,7 @@
-﻿using SixLabors.ImageSharp;
-
-using System.Runtime.CompilerServices;
-using System;
-using System.Collections.Generic;
+﻿using System.Runtime.CompilerServices;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 
 namespace WpfView
