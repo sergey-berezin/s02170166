@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Closing="WindowClosing"
+        Background="DarkSalmon"
+        ResizeMode="CanMinimize"
+        WindowState="Maximized"
+        Title="Task2ForDotNetAutumn" Height="766.8" Width="1308.873">
+    <Grid Margin="0,0,-6.6,-20.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="419*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="261*"/>
+        </Grid.ColumnDefinitions>
+        <Button Name="LaunchButton" Content="Process images in chosen directory!" Command="local:UserCommands.LaunchProcessingCommand" HorizontalAlignment="Left" Height="22" Margin="25,92,0,0" VerticalAlignment="Top" Width="209" Background="Beige" RenderTransformOrigin="2.977,4.021"/>
+        <Button Name="ChooseButton" Content="Choose directory!" Command="ApplicationCommands.Open" HorizontalAlignment="Left" Height="22" Margin="25,65,0,0" VerticalAlignment="Top" Width="209" Background="Beige"/>
+        <TextBlock Name="CurrentChosenDirectoryTextBlock" Text="{Binding Path=CurrentChosenDirectory, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="21" Margin="10,10,0,0" VerticalAlignment="Top" Width="1281" Background="Beige" RenderTransformOrigin="-2.195,2.459" Grid.ColumnSpan="4"/>
+        <Button Name="InterruptButton" Content="Stop processing!" Command="ApplicationCommands.Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Margin="25,673,0,0" RenderTransformOrigin="-2.323,-1.765" Height="22"/>
+        <Grid Name="CurrentChosenClassGrid" HorizontalAlignment="Left" Height="620" Margin="300,100,-141.4,-180.2" VerticalAlignment="Top" Width="991" Grid.ColumnSpan="4">
+            <ListBox Name="ImagesListBox" ItemsSource="{Binding Path=Images, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="560" Margin="234,50,0,0" VerticalAlignment="Top" Width="757" Background="Beige">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding}" Stretch="Uniform" StretchDirection="DownOnly" Width="715" Height="280"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock Name="TotalCountOfImagesTextBlock" HorizontalAlignment="Left" Margin="-273,474,0,0" VerticalAlignment="Top" Height="24" Width="519" RenderTransformOrigin="1.749,1.318">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}{0} image(-s) has(-ve) been recognized as {1}">
+                        <Binding Path ="Count"/>
+                        <Binding Path ="Name"/>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </Grid>
+        <ListBox Name="ClassesOfImagesListBox" HorizontalAlignment="Left" Height="336" Margin="25,223,0,0" VerticalAlignment="Top" Width="209" ItemsSource="{Binding ClassesOfImagesList, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedIndex="{Binding SelectedClassOfImagesIndex, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Background="Beige">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock x:Name="type" Text="{Binding Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock Text="Choose class of images:" HorizontalAlignment="Left" Margin="25,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
